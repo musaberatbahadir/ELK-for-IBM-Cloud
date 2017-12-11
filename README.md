@@ -53,18 +53,18 @@ Your elasticsearch service will be hosted on yellow rectangular area. You will u
 #### <a name="put-index"></a> 3- Put your Index
 Now you are finally ready to send your first request to the Elasticsearch cluster.
 Open Postman application on your computer.
-1- Select "PUT" from request types.
-2- Paste your endpoint + indexname. It should be something like this:
+1. Select "PUT" from request types.
+2. Paste your endpoint + indexname. It should be something like this:
 https://admin:ASDFGHJKLQWERTYU@portal-ddl888-8.bmix-dal-yp-123esed2-23ss-1111-333a-32352451.asdasda-us-ibm-com.composedb.com:12345/myindex
-3- You can send your request by clicking Send.
-4- When you select the body, result will be seen.
+3. You can send your request by clicking Send.
+4. When you select the body, result will be seen.
 ![img/3-put_index.png]()
 
 #### <a name="add-doc"></a> 4- Add a document to your index
 Now that you have an index, Let's add some some documents to it. You do that by sending a POST request to a URI consisting of index name, followed by a type. In this how-to our index name is "myindex" and type name is "default", that make the request URI "myindex/default".
-1- Select "POST" from request types and add your endpoint /myindex/default
-2- Select Body and choose Raw option to write your document.
-3- You should write a json document for adding to index. In the example document has been written like:
+1. Select "POST" from request types and add your endpoint /myindex/default
+2. Select Body and choose Raw option to write your document.
+3. You should write a json document for adding to index. In the example document has been written like:
 ```json
 {
 	"name": "Musa Berat Bahadir",
@@ -75,16 +75,16 @@ Now that you have an index, Let's add some some documents to it. You do that by 
 }
 ``` 
 ![img/4.0-add_a_doc.png]()
-4- You can send your request and result will be shown when you click the Header on the left the Body.
+4. You can send your request and result will be shown when you click the Header on the left the Body.
 ![img/4.1-add_a_doc_res.png]()
 
 Since you did not identify an id, Elasticsearch gives your document a random id.
 
 #### <a name="add-doc-id"></a> 5- Add a document with id
 For avoiding to automatically generated id, you should trace the steps below.
-1- You need to change the HTTP verb to PUT and specify the id.
-2- Again select Body and choose Raw option to write your document.
-3- You should write a json document for adding to index. In the example document has been written like: 
+1. You need to change the HTTP verb to PUT and specify the id.
+2. Again select Body and choose Raw option to write your document.
+3. You should write a json document for adding to index. In the example document has been written like: 
 ```json
 {
 	"name": "Musa Berat Bahadir 2",
@@ -95,21 +95,21 @@ For avoiding to automatically generated id, you should trace the steps below.
 }
 ```
 ![img/4.2-add_a_doc_with_id.png]()
-4- You can send your request and result will be shown when you click the Header on the left the Body.
+4. You can send your request and result will be shown when you click the Header on the left the Body.
 ![img/4.3-add_a_doc_with_id_res.png]()
 
 #### <a name="get-doc"></a> 6- Get a document
 Now, you have a couple of documents available within your index. For retrieving a document with id from your index:
-1- Select "GET" from request types and add your endpoint to /myindex/default/1 to URI area.
-2- Send your request.
-3- Click Header to see the result.
+1. Select "GET" from request types and add your endpoint to /myindex/default/1 to URI area.
+2. Send your request.
+3. Click Header to see the result.
 ![img/5-retrieve_a_doc.png]()
 
 #### <a name="update-doc"></a> 7- Update a document
 Instead of replacing the entire document, you can patch it by only specifying what you want.
-1- Select "POST" from request types and add your endpoint to /myindex/default/1/_update
-2- Select Body and choose Raw option to add your document.
-3- Update API expects a JSON object and within this object you should add a "doc" property, which itself should be an object. In the example document has been written like: 
+1. Select "POST" from request types and add your endpoint to /myindex/default/1/_update
+2. Select Body and choose Raw option to add your document.
+3. Update API expects a JSON object and within this object you should add a "doc" property, which itself should be an object. In the example document has been written like: 
 ```json
 {
 	"doc": {
@@ -119,15 +119,15 @@ Instead of replacing the entire document, you can patch it by only specifying wh
 }
 ```
 Within this object you can specify the fields that you would like to change ("name") or you can also add new fields with this approach("tags").
-4- Now you can send your request.
+4. Now you can send your request.
 ![img/6.0-update_a_doc.png]()
-5- Click Headers to see the result.
+5. Click Headers to see the result.
 ![img/6.1-update_a_doc_res.png]()
 
 #### <a name="delete-doc"></a> 8- Delete a Document
 Deleting document is easist operation in all.
-1- Select "DELETE" from request types and add your endpoint to /myindex/default/1
-2- Send your request then result will appear below.
+1. Select "DELETE" from request types and add your endpoint to /myindex/default/1
+2. Send your request then result will appear below.
 ![img/7-delete_a_doc_res.png]()
 
 <a name="conclusion"></a> Conclusion
