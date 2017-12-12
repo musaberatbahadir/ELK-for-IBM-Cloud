@@ -11,7 +11,7 @@ This tutorial will demonstrate how to perform Create, Read, Update and Delete op
 	1. [Download Postman](#preq1)
 	2. [A Billable account](#preq2)
 3. [Steps](#steps)
-	1. [Create a Elasticsearch service on IBM Cloud](#create-service)
+	1. [Create an Elasticsearch service on IBM Cloud](#create-service)
 	2. [Get your Endpoint](#get-link)
 	3. [Put your Index](#put-index)
 	4. [Add a document to your index](#add-doc)
@@ -30,7 +30,7 @@ This tutorial will demonstrate how to perform Create, Read, Update and Delete op
 #### <a name="preq1"></a> 1- Download Postman
 Postman is a useful tool when trying to dissect RESTful APIs made by others or test ones you have made yourself. It offers a sleek user interface with which to make HTML requests, without the hassle of writing a bunch of code just to test an API's functionality.
 
-You can dowload [here](https://www.getpostman.com/).
+Download it from [here](https://www.getpostman.com/).
 
 
 #### <a name="preq2"></a> 2- A Billable account 
@@ -40,7 +40,7 @@ You can look at Billable Account types [here](https://console.bluemix.net/docs/p
 <a name="steps"></a> Steps
 -------------
 
-#### <a name="create-service"></a> 1- Create a Elasticsearch service on IBM Cloud
+#### <a name="create-service"></a> 1- Create an Elasticsearch service on IBM Cloud
 After clicking the Catalog, you should select Data&Analystics from the menu on the left. Then you can select Compose for Elasticsearch service.
 ![create_service](img/0-select_from_catalog.png)
 
@@ -48,16 +48,16 @@ Before creating service, you should select a valid Region, Organization and Spac
   
 #### <a name="get-link"></a> 2- Get your Endpoint
 Your elasticsearch service will be hosted on yellow rectangular area. You will use this link as **"yourlink"** in the whole scenario.
-![copy_cred](img/2-copy_endpoint)
+![copy_cred](img/2-copy_endpoint.png)
 
 #### <a name="put-index"></a> 3- Put your Index
 Now you are finally ready to send your first request to the Elasticsearch cluster.
 Open Postman application on your computer.
 1. Select "PUT" from request types.
 2. Paste your endpoint + indexname. It should be something like this:
-https://admin:ASDFGHJKLQWERTYU@portal-ddl888-8.bmix-dal-yp-123esed2-23ss-1111-333a-32352451.asdasda-us-ibm-com.composedb.com:12345/myindex
+https://admin:HSYFMLSITJFLCHJS@portal-ddl888-8.bmix-dal-yp-123esed2-23ss-1111-333a-32352451.asdasda-us-ibm-com.composedb.com:12345/myindex
 3. You can send your request by clicking Send.
-4. When you select the body, result will be seen.
+4. When you select body,the result will be seen.
 ![put_index](img/3-put_index.png)
 
 #### <a name="add-doc"></a> 4- Add a document to your index
@@ -128,7 +128,7 @@ Within this object you can specify the fields that you would like to change ("na
 Deleting document is easist operation in all.
 1. Select "DELETE" from request types and add your endpoint to /myindex/default/1
 2. Send your request then result will appear below.
-![delete_doc](img/7-delete_a_doc_res.png)
+![delete_doc](img/7-delete_a_doc.png)
 
 <a name="conclusion"></a> Conclusion
 ------
